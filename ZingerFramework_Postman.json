@@ -1,0 +1,1657 @@
+{
+	"info": {
+		"_postman_id": "56745f79-73fb-4d0e-9d8e-4627c5fc16c8",
+		"name": "Food ordering",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "localhost:8080/user/customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"9176786582\",\n    \"oauthId\": \"auth_9176786582\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/place",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "7"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "CUSTOMER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"name\": \"LogeshSSS\",\n\t\t\"email\":\"ddlogesh@gmail.com\",\n\t\t\"mobile\":\"sfdbgffed1\",\n\t\t\"oauthId\": \"auth_9176786582\",\n\t\t\"id\":3\n\t},\n\t\"placeModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/place",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "8"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"KamalS\",\n\t\"email\":\"ddlogesh@gmail.com\",\n\t\"mobile\":\"9176786583\",\n\t\"oauthId\": \"auth_9176786xxx\",\n\t\"id\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/notif",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "8"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"notificationToken\":\"token_2\",\n\t\"id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/notif",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"notif"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/seller/invite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"mobile\":\"9176786598\",\n\t\t\"role\":\"SELLER\"\n\t},\n\t\"shopModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/seller/invite",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"seller",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/seller/invite",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"mobile\":\"9176786588\",\n\t\t\"role\":\"SELLER\"\n\t},\n\t\"shopModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/seller/invite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"seller",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/accept/invite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"mobile\":\"9176786598\",\n\t\t\"oauthId\":\"auth_9176786598\"\n\t},\n\t\"shopModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/accept/invite/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"accept",
+								"invite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/verify/invite/shopId/mobile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/verify/invite/1/9176786598",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"verify",
+								"invite",
+								"1",
+								"9176786598"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/seller/shopId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "8"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/user/seller/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"seller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/seller/shopId/userId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/user/seller/1/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"seller",
+								"1",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/seller",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"sfdbgffed1\",\n    \"oauthId\": \"sfdbgffed1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/seller",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"seller"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "shop",
+			"item": [
+				{
+					"name": "localhost:8080/shop/place/placeId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176019334"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/shop/place/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"place",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/shop/shopId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "sfdbgffed1"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/shop/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/shop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "sfdbgffed"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SUPER_ADMIN"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shopModel\": {\n        \"name\": \"SSN Vishwas\",\n        \"photoUrl\": \"www.url.com\",\n        \"coverUrls\":[\"shop.com\",\"shop.com\"],\n        \"mobile\": \"9176786586\",\n        \"placeModel\": {\n            \"id\": 1\n        },\n        \"openingTime\": \"08:00:00\",\n        \"closingTime\": \"22:00:00\"\n    },\n    \"merchantId\":\"LOG_MID\",\n    \"deliveryPrice\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/shop/config",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "sfdbgffed1"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shopModel\": {\n        \"id\": 1,\n        \"name\": \"Sathyas Main Canteen\",\n        \"photoUrl\": \"www.url.com\",\n        \"coverUrls\":[\"ravi.com\",\"logesh.com\"],\n        \"mobile\": \"9176786586\",\n        \"openingTime\": \"08:00:00\",\n        \"closingTime\": \"22:00:00\"\n    },\n    \"merchantId\": \"HARSHA_MID\",\n    \"deliveryPrice\": 30,\n    \"isDeliveryAvailable\": 1,\n    \"isOrderTaken\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/shop/config",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/shop/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786580"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SUPER_ADMIN"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shopModel\": {\n        \"id\": 1,\n        \"name\": \"Sathyas Main Canteen\",\n        \"photoUrl\": \"www.url.com\",\n        \"coverUrls\":[\"ravi.com\",\"logesh.com\"],\n        \"mobile\": \"9176786586\",\n        \"openingTime\": \"08:00:00\",\n        \"closingTime\": \"22:00:00\"\n    },\n    \"merchantId\": \"HARSHA_MID\",\n    \"deliveryPrice\": 30,\n    \"isDeliveryAvailable\": 0,\n    \"isOrderTaken\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/shop/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "place",
+			"item": [
+				{
+					"name": "localhost:8080/place",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786581",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "3",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "CUSTOMER",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/place",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/place",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "sfdbgffed",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"IIT\",\n\t\"iconUrl\":\"www.iit.com\",\n\t\"address\":\"Madras\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/place",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "localhost:8080/menu/shop/shopId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786581",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "3",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "CUSTOMER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/menu/shop/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"shop",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/menu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786583",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "5",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "SHOP_OWNER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"testItem3\",\n        \"price\": 40,\n        \"photoUrl\": \"item.com\",\n        \"category\": \"soft drink\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 1\n    },\n    {\n        \"name\": \"testItem4\",\n        \"price\": 40,\n        \"photoUrl\": \"item.com\",\n        \"category\": \"soft drink\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 1\n    },\n    {\n        \"name\": \"testItem5\",\n        \"price\": 40,\n        \"photoUrl\": \"item.com\",\n        \"category\": \"soft drink\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 1\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/menu",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786583",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "5",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "SHOP_OWNER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": 17,\n        \"name\": \"Chicken Fried Kab\",\n        \"price\": 62,\n        \"photoUrl\": \"food.com\",\n        \"category\": \"CHINESE\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 0,\n        \"isAvailable\": 1\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Chicken Fried Ri\",\n        \"price\": 63,\n        \"photoUrl\": \"food.com\",\n        \"category\": \"CHINESE\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 0,\n        \"isAvailable\": 1\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Chicken Fried Ri\",\n        \"price\": 66,\n        \"photoUrl\": \"food.com\",\n        \"category\": \"CHINES\",\n        \"shopModel\": {\n            \"id\": 2\n        },\n        \"isVeg\": 1,\n        \"isAvailable\": 0\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/menu/delete/itemId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/menu/delete/43",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"delete",
+								"43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/menu/collegeId/parota",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786582",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "7",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "CUSTOMER",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/menu/2/chi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"2",
+								"chi"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "localhost:8080/order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786582",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "7",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "CUSTOMER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transactionModel\": {\n        \"orderModel\": {\n            \"userModel\": {\n                \"id\": 7\n            },\n            \"shopModel\": {\n                \"id\": 1\n            },\n            \"price\": 310,\n            \"cookingInfo\": \"Less salt\",\n            \"deliveryPrice\": 15,\n            \"deliveryLocation\": \"Clock tower\"\n        }\n    },\n    \"orderItemsList\": [\n        {\n            \"itemModel\": {\n                \"id\": 1\n            },\n            \"quantity\": 2,\n            \"price\": 150\n        },\n        {\n            \"itemModel\": {\n                \"id\": 2\n            },\n            \"quantity\": 2,\n            \"price\": 130\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/place/orderId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "7"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "CUSTOMER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/place/13",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"place",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/customer/userId/pageNum/pageCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "7"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "CUSTOMER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/customer/7/1/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"customer",
+								"7",
+								"1",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/shopid/searchItem/pageNum/pageCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786581"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "2"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "CUSTOMER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/loge/1/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"loge",
+								"1",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "7"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "CUSTOMER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/seller/shopId/pageNum/pageCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/seller/1/1/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"seller",
+								"1",
+								"1",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/seller/shopId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/order/seller/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"seller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/rating",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "auth_9176786582",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "7",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "CUSTOMER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 13,\n    \"rating\": 4.1,\n    \"feedback\":\"Hello, food was nice\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/order/rating",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/order/status",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "oauth_id",
+								"value": "sfdbgffed1",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "3",
+								"type": "text"
+							},
+							{
+								"key": "role",
+								"value": "SHOP_OWNER",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 13,\n\t\"orderStatus\" : \"CANCELLED_BY_SELLER\",\n\t\"secretKey\":\"870429\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/order/status",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "notify",
+			"item": [
+				{
+					"name": "localhost:8080/notify/seller/invite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786583"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"mobile\":\"9176786598\"\n\t},\n\t\"shopModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notify/seller/invite",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notify",
+								"seller",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/notify/url",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786584"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "4"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SUPER_ADMIN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\":\"URL\",\n\t\"title\":\"Test URL message\",\n\t\"message\":\"Message\",\n\t\"payload\":\"{\\\"url\\\":\\\"google.com\\\"}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notify/url",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notify",
+								"url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/notify/newArrivals",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786584"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "4"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SUPER_ADMIN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\":\"NEW_ARRIVAL\",\n\t\"title\":\"Test URL message\",\n\t\"message\":\"Message\",\n\t\"payload\":\"{\\\"shop_id\\\":\\\"1\\\",\\\"shop_name\\\":\\\"Snow Qube\\\"}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notify/newArrivals",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notify",
+								"newArrivals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/notify/seller/test",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "oauth_id",
+								"type": "text",
+								"value": "auth_9176786582"
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "3"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "role",
+								"type": "text",
+								"value": "SHOP_OWNER"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userModel\":{\n\t\t\"mobile\":\"9176786598\"\n\t},\n\t\"shopModel\":{\n\t\t\"id\":1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notify/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notify",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
